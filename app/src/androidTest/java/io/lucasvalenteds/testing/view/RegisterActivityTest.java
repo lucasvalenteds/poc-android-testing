@@ -23,7 +23,7 @@ public class RegisterActivityTest extends TestCase {
 
     @Rule
     public ActivityTestRule<RegisterActivity> mActivityTestRule =
-            new ActivityTestRule<>(RegisterActivity.class, true, true);
+            new ActivityTestRule<>(RegisterActivity.class, false, true);
 
     @Test
     public void whenActivityIsLaunchedTheAppNameShouldBeDisplayed() {
