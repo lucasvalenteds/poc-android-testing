@@ -42,14 +42,14 @@ configure<BaseExtension> {
 }
 
 dependencies {
-    implementation("com.android.support:appcompat-v7:28.0.0-rc01")
+    implementation("com.android.support:appcompat-v7:28.0.0")
 
     testImplementation("junit:junit:4.12")
 
     androidTestImplementation("com.android.support.test:rules:1.0.2")
     androidTestImplementation("com.android.support.test:runner:1.0.2")
     androidTestImplementation("com.android.support.test.espresso:espresso-core:3.0.2")
-    androidTestImplementation("com.android.support:appcompat-v7:28.0.0-rc01")
+    androidTestImplementation("com.android.support:appcompat-v7:28.0.0")
 }
 
 tasks.withType<Test> {
