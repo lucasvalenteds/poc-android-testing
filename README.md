@@ -14,10 +14,13 @@ The UI tests verify that the user can interact with the app in a way that the ex
 
 | Description | Command |
 | :--- | :--- |
-| Run unit tests | `./gradlew clean test` |
-| Run UI tests | `./gradlew clean connectedAndroidTest` |
+| Install tooling | `make install` |
+| Create an emulator | `make create` |
+| Delete an emulator | `make delete` |
+| Start the emulator |`make device` |
+| Run tests | `make test` |
 
-> Note: UI tests requires an Android device or emulator.
+> Note: UI tests requires an emulator or physical device.
 
 ## Preview
 
