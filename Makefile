@@ -16,7 +16,6 @@ create:
 			--device "pixel" \
 			--name $(NAME) \
 			--package "system-images;android-$(API);default;x86" \
-			--sdcard 256M \
 			--path $(FOLDER)
 
 delete:
