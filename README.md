@@ -12,15 +12,13 @@ The UI tests verify that the user can interact with the app in a way that the ex
 
 ## How to run
 
-| Description | Command |
-| :--- | :--- |
-| Install tooling | `make install` |
-| Create an emulator | `make create` |
-| Delete an emulator | `make delete` |
-| Start the emulator |`make device` |
-| Run tests | `make test` |
-
-> Note: UI tests requires an emulator or physical device.
+| Description        | Command        |
+| :----------------- | :------------- |
+| Install tooling    | `make install` |
+| Create the emulator | `make create`  |
+| Delete the emulator | `make delete`  |
+| Start the emulator | `make device`  |
+| Run tests          | `make test`    |
 
 ## Preview
 
