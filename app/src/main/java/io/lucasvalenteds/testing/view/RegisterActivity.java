@@ -6,7 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.example.testing.R;
+import io.lucasvalenteds.testing.R;
 import io.lucasvalenteds.testing.model.person.Person;
 
 public class RegisterActivity extends AppCompatActivity {

@@ -3,7 +3,7 @@ package io.lucasvalenteds.testing.view;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 
-import com.example.testing.R;
+import io.lucasvalenteds.testing.R;
 
 import junit.framework.TestCase;
 
@@ -23,7 +23,7 @@ public class RegisterActivityTest extends TestCase {
 
     @Rule
     public ActivityTestRule<RegisterActivity> mActivityTestRule =
-            new ActivityTestRule<>(RegisterActivity.class, false, true);
+            new ActivityTestRule<>(RegisterActivity.class, true, true);
 
     @Test
     public void whenActivityIsLaunchedTheAppNameShouldBeDisplayed() {

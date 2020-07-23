@@ -1,4 +1,6 @@
 import com.android.build.gradle.BaseExtension
+import com.android.build.gradle.internal.dsl.TestOptions
+import org.gradle.api.tasks.testing.logging.TestLogEvent
 
 plugins {
     id("com.android.application")
@@ -13,6 +15,8 @@ configure<BaseExtension> {
         versionCode = 1
         versionName = "1.0"
         testInstrumentationRunner = "android.support.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunnerArgument("clearPackageData", "true")
+        testInstrumentationRunnerArgument("disableAnalytics", "true")
     }
     buildTypes {
         getByName("release") {
@@ -29,6 +33,12 @@ configure<BaseExtension> {
         setTargetCompatibility(1.8)
         setSourceCompatibility(1.8)
     }
+    testOptions {
+        animationsDisabled = true
+        unitTests(closureOf<TestOptions.UnitTestOptions> {
+            isIncludeAndroidResources = true
+        })
+    }
 }
 
 dependencies {
@@ -36,7 +46,14 @@ dependencies {
 
     testImplementation("junit:junit:4.12")
 
+    androidTestImplementation("com.android.support.test:rules:1.0.2")
     androidTestImplementation("com.android.support.test:runner:1.0.2")
     androidTestImplementation("com.android.support.test.espresso:espresso-core:3.0.2")
     androidTestImplementation("com.android.support:appcompat-v7:28.0.0-rc01")
+}
+
+tasks.withType<Test> {
+    testLogging {
+        events = setOf(TestLogEvent.PASSED, TestLogEvent.FAILED)
+    }
 }
